@@ -116,7 +116,7 @@ Chapter 3
 引用
 
 123&amp;lt;q&amp;gt;">
-<meta property="og:updated_time" content="2016-06-18T14:37:05.626Z">
+<meta property="og:updated_time" content="2016-06-23T15:41:52.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html/css笔记">
 <meta name="twitter:description" content="Chapter 2
@@ -457,7 +457,67 @@ Chapter 3
 <h4 id="Chapter-8"><a href="#Chapter-8" class="headerlink" title="Chapter 8"></a>Chapter 8</h4><ul>
 <li>选择器常用属性</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">font-size: 14px; #字号</span><br><span class="line">font-weight: bold; #字重，参数有bold,bolder,normal,lighter……</span><br><span class="line">text-decoration: line-through; #字体样式，参数有underline,overline,line-through(删除线)……</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-size</span>: 14<span class="selector-tag">px</span>; #字号</span><br><span class="line"></span><br><span class="line"><span class="comment">/*Tip_1: font-size: 1.2em; font-size: 150%; 也是一种表现方式，其参照是父元素中的font-size的属性*/</span></span><br><span class="line"><span class="comment">/*Tip_2: 浏览器默认的标题大小一般为</span><br><span class="line">h1_3em,h2_2.5em,h3_2.4em,h4_2em,h5_1.9em,h6_1.6em*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-weight</span>: <span class="selector-tag">bold</span>; #字重，参数有<span class="selector-tag">bold</span>,<span class="selector-tag">bolder</span>,<span class="selector-tag">normal</span>,<span class="selector-tag">lighter</span>……</span><br><span class="line"><span class="selector-tag">text-decoration</span>: <span class="selector-tag">line-through</span>; #字体样式，参数有<span class="selector-tag">underline</span>,<span class="selector-tag">overline</span>,<span class="selector-tag">line-through</span>(删除线)……</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">color</span>: ……</span><br><span class="line"><span class="comment">/*Tip_1: 颜色指示的方法</span><br><span class="line">	color: rgb(80%, 40%, 0%)</span><br><span class="line">	color: rgb(204, 102, 0)</span><br><span class="line">	color: #cc6600</span><br><span class="line">*/</span></span><br></pre></td></tr></table></figure>
+<h4 id="Chapter-9"><a href="#Chapter-9" class="headerlink" title="Chapter 9"></a>Chapter 9</h4><ul>
+<li>CSS盒模型<ul>
+<li>内容区</li>
+<li>内边距:    padding</li>
+<li>边框</li>
+<li>外边距:    margin</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.first_class</span>&#123;</span><br><span class="line">	<span class="attribute">padding</span>:			<span class="number">25px</span>;</span><br><span class="line">	<span class="attribute">padding-left</span>:		<span class="number">80px</span>;</span><br><span class="line">	<span class="comment">/*此处padding和padding-left的顺序很重要，下面的属性覆盖上面已设定的属性*/</span></span><br><span class="line">	<span class="attribute">margin</span>:				<span class="number">30px</span>;</span><br><span class="line">	<span class="attribute">margin-right</span>:		<span class="number">250px</span>;</span><br><span class="line">	<span class="attribute">background-image</span>: 	<span class="built_in">url</span>(...)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*Tip_1:backgroud的一些元素</span><br><span class="line">background-repeat	no-repeat/repeat-x/repeat-y/inherit</span><br><span class="line">bakground-position	top/left</span><br><span class="line">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*Tip_2:border的一些属性</span><br><span class="line">border-width</span><br><span class="line">border-color</span><br><span class="line">border-style		solid/double/groove/dotted/dashed/inset/outset/redge</span><br><span class="line">border-radius		放置圆角</span><br><span class="line">	border-top-left-radius </span><br><span class="line">	...</span><br><span class="line">*/</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用多个样式表以针对不同的情况/媒体查询</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"*.css"</span>	<span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">media</span>=<span class="string">"print"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> print &#123;</span><br><span class="line">	<span class="selector-tag">body</span> &#123;</span><br><span class="line">		<span class="attribute">font-family</span>: Times, <span class="string">"Times New Roman"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Chapter-10"><a href="#Chapter-10" class="headerlink" title="Chapter 10"></a>Chapter 10</h4><ul>
+<li>用&lt;div&gt;标记逻辑区</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#box &#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>css中对&lt;div&gt;加的width属性只指定内容区</li>
+<li>text-align:    center       <ul>
+<li>只能对块元素使用</li>
+<li>对所有内联元素起作用</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#box</span> <span class="selector-tag">h3</span> &#123;&#125; <span class="comment">/*对&lt;div&gt;box的子孙进行选择*/</span></span><br><span class="line"><span class="selector-id">#box</span>&gt;<span class="selector-tag">h3</span> &#123;&#125; <span class="comment">/*对&lt;div&gt;box的直接孩子进行选择*/</span></span><br><span class="line"><span class="selector-id">#box</span> <span class="selector-tag">blockquote</span> <span class="selector-tag">h3</span> &#123;&#125; <span class="comment">/*对&lt;div&gt;box的blockquote中的h3进行选择*/</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>line-height 行高属性可以以数字作为参数，表示相对于字体大小的行高大小</li>
+<li><p>简写</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">padding: 	top bottom left right</span><br><span class="line">margin:		top bottom left right</span><br><span class="line">font:		font-style font-variant font-weight font-size/line-height font-family</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用&lt;span&gt;标记内联的逻辑区</p>
+</li>
+<li><p>伪类&lt;a&gt;的应用</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span> &#123;&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span>&#123;&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Chapter-11"><a href="#Chapter-11" class="headerlink" title="Chapter 11"></a>Chapter 11</h4><ul>
+<li>Flow 流<ul>
+<li>块元素 从上到下</li>
+<li>内联元素 从左上到右下</li>
+</ul>
+</li>
+<li>Float 浮动元素<ul>
+<li>标识，如指定一个id</li>
+<li>宽度</li>
+<li>float: right</li>
+<li>clear: right 不允许右部有浮动元素</li>
+</ul>
+</li>
+<li>流体布局、冻结布局和凝胶布局<ul>
+<li>凝胶布局<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#allcontent</span> &#123;</span><br><span class="line">	<span class="attribute">margin-left</span>: 	auto;</span><br><span class="line">	<span class="attribute">margin-right</span>:	auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -605,7 +665,7 @@ Chapter 3
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-2"><span class="nav-number">1.</span> <span class="nav-text">Chapter 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-3"><span class="nav-number">2.</span> <span class="nav-text">Chapter 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-4"><span class="nav-number">3.</span> <span class="nav-text">Chapter 4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-5"><span class="nav-number">4.</span> <span class="nav-text">Chapter 5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-6"><span class="nav-number">5.</span> <span class="nav-text">Chapter 6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-7"><span class="nav-number">6.</span> <span class="nav-text">Chapter 7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-8"><span class="nav-number">7.</span> <span class="nav-text">Chapter 8</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-2"><span class="nav-number">1.</span> <span class="nav-text">Chapter 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-3"><span class="nav-number">2.</span> <span class="nav-text">Chapter 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-4"><span class="nav-number">3.</span> <span class="nav-text">Chapter 4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-5"><span class="nav-number">4.</span> <span class="nav-text">Chapter 5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-6"><span class="nav-number">5.</span> <span class="nav-text">Chapter 6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-7"><span class="nav-number">6.</span> <span class="nav-text">Chapter 7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-8"><span class="nav-number">7.</span> <span class="nav-text">Chapter 8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-9"><span class="nav-number">8.</span> <span class="nav-text">Chapter 9</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-10"><span class="nav-number">9.</span> <span class="nav-text">Chapter 10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-11"><span class="nav-number">10.</span> <span class="nav-text">Chapter 11</span></a></li></ol></div>
             
           </div>
         </section>
