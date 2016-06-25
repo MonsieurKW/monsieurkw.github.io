@@ -116,7 +116,7 @@ Chapter 3
 引用
 
 123&amp;lt;q&amp;gt;">
-<meta property="og:updated_time" content="2016-06-23T15:44:37.653Z">
+<meta property="og:updated_time" content="2016-06-25T07:42:16.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html/css笔记">
 <meta name="twitter:description" content="Chapter 2
@@ -500,11 +500,19 @@ Chapter 3
 <li><p>伪类&lt;a&gt;的应用</p>
 </li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span> &#123;&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span>&#123;&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span> &#123;&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span> &#123;&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="Chapter-11"><a href="#Chapter-11" class="headerlink" title="Chapter 11"></a>Chapter 11</h4><ul>
 <li>Flow 流<ul>
-<li>块元素 从上到下</li>
-<li>内联元素 从左上到右下</li>
+<li>块元素<ul>
+<li>从上到下</li>
+<li>并排放置会计算其外边距之和</li>
+</ul>
+</li>
+<li>内联元素<ul>
+<li>从左上到右下</li>
+<li>会折叠外边距</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Float 浮动元素<ul>
@@ -520,6 +528,32 @@ Chapter 3
 </li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#allcontent</span> &#123;</span><br><span class="line">	<span class="attribute">margin-left</span>: 	auto;</span><br><span class="line">	<span class="attribute">margin-right</span>:	auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>绝对定位<ul>
+<li>该&lt;div&gt;的位置绝对，其他&lt;div&gt;不会围绕该&lt;div&gt;布置内容</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#sidebar</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">right</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">280px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*Tip_1:其他的position的属性</span><br><span class="line">	fixed		固定，相对于浏览器窗口</span><br><span class="line">	static		静态，按正常流布置</span><br><span class="line">	absolute</span><br><span class="line">	relative	正常流入，弹药进行一定偏移*/</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>CSS表格中只能放置块元素</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#tableContainer</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tableRow</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: table-row;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: table-cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Chapter-12"><a href="#Chapter-12" class="headerlink" title="Chapter 12"></a>Chapter 12</h4><ul>
+<li>HTML5新标签<ul>
+<li>&lt;header&gt;</li>
+<li>&lt;nav&gt;</li>
+<li>&lt;article&gt;</li>
+<li>&lt;footer&gt;</li>
+<li>&lt;section&gt;</li>
+</ul>
+</li>
+</ul>
+<h4 id="Chapter-13"><a href="#Chapter-13" class="headerlink" title="Chapter 13"></a>Chapter 13</h4><ul>
+<li>建立表格</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span>	</span><br><span class="line">	<span class="tag">&lt;<span class="name">caption</span>&gt;</span></span><br><span class="line">		Life in China</span><br><span class="line">	<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">th</span>&gt;</span>City<span class="tag">&lt;/<span class="name">th</span>&gt;</span>	</span><br><span class="line">		<span class="tag">&lt;<span class="name">th</span>&gt;</span>Date<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">"2"</span>&gt;</span>Beijing<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">"2"</span>&gt;</span>01/01/2015<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">border-collapse</span>: <span class="selector-tag">collapse</span>;</span><br><span class="line"><span class="comment">/*border-spacing: 0px;*/</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -666,7 +700,7 @@ Chapter 3
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-2"><span class="nav-number">1.</span> <span class="nav-text">Chapter 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-3"><span class="nav-number">2.</span> <span class="nav-text">Chapter 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-4"><span class="nav-number">3.</span> <span class="nav-text">Chapter 4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-5"><span class="nav-number">4.</span> <span class="nav-text">Chapter 5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-6"><span class="nav-number">5.</span> <span class="nav-text">Chapter 6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-7"><span class="nav-number">6.</span> <span class="nav-text">Chapter 7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-8"><span class="nav-number">7.</span> <span class="nav-text">Chapter 8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-9"><span class="nav-number">8.</span> <span class="nav-text">Chapter 9</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-10"><span class="nav-number">9.</span> <span class="nav-text">Chapter 10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-11"><span class="nav-number">10.</span> <span class="nav-text">Chapter 11</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-2"><span class="nav-number">1.</span> <span class="nav-text">Chapter 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-3"><span class="nav-number">2.</span> <span class="nav-text">Chapter 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-4"><span class="nav-number">3.</span> <span class="nav-text">Chapter 4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-5"><span class="nav-number">4.</span> <span class="nav-text">Chapter 5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-6"><span class="nav-number">5.</span> <span class="nav-text">Chapter 6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-7"><span class="nav-number">6.</span> <span class="nav-text">Chapter 7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-8"><span class="nav-number">7.</span> <span class="nav-text">Chapter 8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-9"><span class="nav-number">8.</span> <span class="nav-text">Chapter 9</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-10"><span class="nav-number">9.</span> <span class="nav-text">Chapter 10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-11"><span class="nav-number">10.</span> <span class="nav-text">Chapter 11</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-12"><span class="nav-number">11.</span> <span class="nav-text">Chapter 12</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Chapter-13"><span class="nav-number">12.</span> <span class="nav-text">Chapter 13</span></a></li></ol></div>
             
           </div>
         </section>
